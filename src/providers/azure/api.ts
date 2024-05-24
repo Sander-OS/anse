@@ -24,5 +24,5 @@ export const fetchImageGeneration = async(payload: AzureFetchPayload) => {
     method: 'POST',
     body: JSON.stringify(body),
   }
-  return fetch(`${baseUrl}.openai.azure.com/openai/images/generations:submit?api-version=2024-02-15-preview`, initOptions)
+  return fetch(`${baseUrl}/openai/deployments/${model}/images/generations?api-version=2024-04-01-preview`, initOptions)
 }
